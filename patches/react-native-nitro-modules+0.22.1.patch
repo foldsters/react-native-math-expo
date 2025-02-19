@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-nitro-modules/NitroModules.podspec b/node_modules/react-native-nitro-modules/NitroModules.podspec
+index 137a0e6..e0a5d14 100644
+--- a/node_modules/react-native-nitro-modules/NitroModules.podspec
++++ b/node_modules/react-native-nitro-modules/NitroModules.podspec
+@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
+   s.authors      = package["author"]
+   s.source       = { :git => "https://github.com/mrousavy/nitro.git", :tag => "#{s.version}" }
+   s.platforms    = {
+-    :ios => min_ios_version_supported,
++    :ios => 16.0,
+     :visionos => 1.0,
+     :macos => 10.13,
+     :tvos => 13.4,
