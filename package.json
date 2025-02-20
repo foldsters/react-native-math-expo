@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "postinstall": "./scripts/postinstall.sh && patch-package"
+    "postinstall": "patch-package"
   },
   "jest": {
     "preset": "jest-expo"
@@ -38,7 +38,7 @@
     "react-dom": "18.3.1",
     "react-native": "0.76.7",
     "react-native-gesture-handler": "~2.20.2",
-    "react-native-math": "file:../.",
+    "react-native-math": "file:./package",
     "react-native-nitro-modules": "^0.22.1",
     "react-native-reanimated": "~3.16.1",
     "react-native-safe-area-context": "4.12.0",
