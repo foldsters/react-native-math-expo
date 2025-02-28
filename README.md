@@ -1,50 +1,30 @@
-# Welcome to your Expo app 👋
+# Nitro Math
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A demonstration of Nitro Modules with mixed C/C++ implementation in an Expo app.
 
-## Get started
+## Overview
 
-1. Install dependencies
+This repo demonstrates how to:
+- Build a Nitro Module with C++ and pure C implementations
+- Access the module from React Native
+- Integrate with Expo projects
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- **Pi Value**: Access a constant value through a native property
+- **Addition**: Call a C++ native function to perform calculations
+- **Number Formatting**: Use a pure C utility function through a C++ bridge
 
-   ```bash
-    npx expo start
-   ```
+## Issues
 
-In the output, you'll find options to open the app in a
+Currently unable to run the app on Android SDK 35 using expo's prebuild command.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The app compiles normally, but I get the error: `java.lang.UnsatisfiedLinkError: dlopen failed: empty/missing DT_HASH/DT_GNU_HASH in "/data/app/~~0oYmWD5XJ7B6A1v8Di-bvw==/com.mgiallourakis.reactnativemathexpo-KsHQ__Cgwf49FeymZnNO4g==/base.apk!/lib/arm64-v8a/libNitroMath.so" (new hash type from the future?)`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+I've provided the android logcat that occurs from the app in `./without_set_target_properties.log`
 
-## Get a fresh project
+I also tried a fix setting `LINK_FLAGS "-Wl,--hash-style=both"` in the CMake, which yields a different error in `with_set_target_properties.log`
 
-When you're ready, run:
+## License
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT
