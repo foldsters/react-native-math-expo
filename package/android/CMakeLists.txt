@@ -25,6 +25,11 @@ include_directories(
 
 find_library(LOG_LIB log)
 
+# Uncomment to get with_set_target_properties.log error
+# set_target_properties(${PACKAGE_NAME} PROPERTIES
+#     LINK_FLAGS "-Wl,--hash-style=both"
+# )
+
 # Link all libraries together
 target_link_libraries(
         ${PACKAGE_NAME}
