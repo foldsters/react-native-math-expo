@@ -19,7 +19,7 @@ This repo demonstrates how to:
 
 Currently unable to run the app on Android SDK 35 using expo's prebuild command.
 
-The app compiles normally, but I get the error: `java.lang.UnsatisfiedLinkError: dlopen failed: empty/missing DT_HASH/DT_GNU_HASH in "/data/app/~~0oYmWD5XJ7B6A1v8Di-bvw==/com.mgiallourakis.reactnativemathexpo-KsHQ__Cgwf49FeymZnNO4g==/base.apk!/lib/arm64-v8a/libNitroMath.so" (new hash type from the future?)`
+The app compiles normally, and runs fine on Android SDK <35 and iOS, but I get the error: `java.lang.UnsatisfiedLinkError: dlopen failed: empty/missing DT_HASH/DT_GNU_HASH in "/data/app/~~0oYmWD5XJ7B6A1v8Di-bvw==/com.mgiallourakis.reactnativemathexpo-KsHQ__Cgwf49FeymZnNO4g==/base.apk!/lib/arm64-v8a/libNitroMath.so" (new hash type from the future?)`
 
 I've provided the android logcat that occurs from the app in `./without_set_target_properties.log`
 
