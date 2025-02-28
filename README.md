@@ -2,7 +2,7 @@
 
 A demonstration of Nitro Modules with mixed C/C++ implementation in an Expo app.
 
-The Nitro module is contained in /package.
+The Nitro module is contained in /package
 
 ## Overview
 
